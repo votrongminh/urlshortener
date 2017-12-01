@@ -1,3 +1,24 @@
+# Use node.js environment
 language: node_js
-node_js:
-  - "iojs"
+# Test only version 7
+node_js: "7"
+# Define different groups of environment variables
+env: 
+  - AUTH=false
+  - AUTH=true USER=test PASSWORD=secret
+# Install dependencies
+install: npm install
+# Start the service
+before_script: npm start
+# Run the tests
+script:
+  - npm run lint
+  - npm test
+# Limit build to master branch
+branches:
+  only:
+    - master
+# Sent notifications via mail
+notifications:
+  email:
+    - dennis.wolters@uni-paderborn.de
