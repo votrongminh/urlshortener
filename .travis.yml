@@ -11,14 +11,14 @@ install: npm install
 # Start the service
 before_script: npm start
 # Run the tests
-script:
-  - npm run lint
-  - npm test
-# Limit build to master branch
-branches:
-  only:
-    - master
-# Sent notifications via mail
-notifications:
-  email:
-    - dennis.wolters@uni-paderborn.de
+# script:
+  # - npm run lint
+  # - npm test
+# # Limit build to master branch
+# branches:
+  # only:
+    # - master
+# # Sent notifications via mail
+# notifications:
+  # email:
+    # - dennis.wolters@uni-paderborn.de
